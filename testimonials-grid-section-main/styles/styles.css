@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: #ecf2f8;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf2f8;
+}
+@media (max-width: 94em) {
+  .wrapper {
+    flex-wrap: wrap;
+    margin: 5rem 0;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-areas: "first first second third" "forth fifh fifh third";
+  grid-template-columns: repeat(4, 15rem);
+  grid-template-rows: 35vh 35vh;
+  gap: 1rem;
+  margin: 0 12.5rem;
+}
+.layout .first {
+  grid-area: first;
+}
+.layout .second {
+  grid-area: second;
+}
+.layout .third {
+  grid-area: third;
+}
+.layout .forth {
+  grid-area: forth;
+}
+.layout .fifh {
+  grid-area: fifh;
+}
+@media (max-width: 94em) {
+  .layout {
+    grid-template-areas: "first" "second" "third" "forth" "fifh";
+    grid-template-columns: repeat(4, 100%);
+    padding-bottom: 3rem;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: white;
+  color: #48556a;
+  box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-purple {
+  background-color: #7541c8;
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 10%;
+}
+.card-darkgray {
+  background-color: #19212e;
+}
+.card-gray {
+  background-color: #48556a;
+}
+.card-dark {
+  color: white;
+}
+.card-light {
+  color: #19212e;
+}
+.card__header {
+  display: flex;
+  align-items: center;
+}
+.card__header__image {
+  margin-right: 1.5rem;
+}
+.card__header__image img {
+  border-radius: 50%;
+  border: 2px solid #cfcfcf;
+  width: 2.75rem;
+}
+.card__header__title {
+  font-weight: 600;
+}
+.card__header__subtitle {
+  color: #cfcfcf;
+}
+.card__body {
+  margin-top: 1rem;
+}
+.card__body__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.card__body__text {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #cfcfcf;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=styles.css.map */
